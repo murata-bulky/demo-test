@@ -1,8 +1,8 @@
 <html>
 <head>
-<title>Hello, Heroku from github!</title>
+<title>Hello, Heroku</title>
 </head>
 <body>
-<h1>Hello, Heroku from github!</h1>
+<h1>Hello, Heroku</h1>
 </body>
 </html>
