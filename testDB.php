@@ -2,7 +2,7 @@
 
 try {
 	// DBへ接続
-	$dbh = new PDO("pgsql:host=ec2-50-16-241-91.compute-1.amazonaws.com; dbname=dc9ftkn51cgcj;", 'zhyyeuduffaiuf', 'b770c8d49644c40a7bbf73401a7c8dd8e140829b3ae028b70fe7e35067279898');
+	$dbh = new PDO("pgsql:host=ec2-50-16-241-91.compute-1.amazonaws.co; dbname=dc9ftkn51cgcj;", 'zhyyeuduffaiuf', 'b770c8d49644c40a7bbf73401a7c8dd8e140829b3ae028b70fe7e35067279898');
 
 	// testテーブルにデータを登録
 	$sql = "insert test (name) values ('test')";
