@@ -16,7 +16,7 @@ try {
 	$data = $dbh->query($sql);
 	print_r("実行");
 	
-	foreach( $data as $value ) {
+	foreach($data as $value){
 		print_r("氏名".$value['name']);
 		//error_log($value['name']);
 	}
