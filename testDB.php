@@ -17,7 +17,7 @@ try {
 	print_r("実行");
 	
 	foreach($data as $value){
-		print_r("氏名".$value['name']);
+		var_dump($value['name']);
 		//error_log($value['name']);
 	}
 
