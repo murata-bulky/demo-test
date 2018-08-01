@@ -1,23 +1,23 @@
 <?php
 
 try {
-	// DB‚ÖÚ‘±
+	// DBã¸æŽ¥ç¶š
 	$dbh = new PDO("pgsql:host=ec2-50-16-241-91.compute-1.amazonaws.com; dbname=dc9ftkn51cgcj;", 'zhyyeuduffaiuf', 'b770c8d49644c40a7bbf73401a7c8dd8e140829b3ae028b70fe7e35067279898');
 
-	// testƒe[ƒuƒ‹‚Éƒf[ƒ^‚ð“o˜^
+	// testãƒ†ãƒ¼ãƒ–ãƒ«ã«ãƒ‡ãƒ¼ã‚¿ã‚’ç™»éŒ²
 	$sql = "insert test (id,name) values ('12345678901','test')";
 	
-	// SQLŽÀs
+	// SQLå®Ÿè¡Œ
 	$res = $dbh->query($sql);
 	print_r("insert".$res);
 	
-	// testƒe[ƒuƒ‹‚Ì‘Sƒf[ƒ^‚ðŽæ“¾
+	// testãƒ†ãƒ¼ãƒ–ãƒ«ã®å…¨ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 	$sql = "SELECT * FROM test";
 	$data = $dbh->query($sql);
 
 	if( !empty($data) ) {
 		foreach( $data as $value ) {
-			print_r("Ž–¼".$value['name']);
+			print_r("æ°å".$value['name']);
 			error_log($value['name']);
 		}
 	}
@@ -28,6 +28,6 @@ try {
 	die();
 }
 
-// Ú‘±‚ð•Â‚¶‚é
+// æŽ¥ç¶šã‚’é–‰ã˜ã‚‹
 $dbh = null;
 ?>
