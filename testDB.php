@@ -16,13 +16,13 @@ try {
 	$res = $dbh->query($sql);
 	
 	// testテーブルにデータを登録
-	$sql = 'insert into test(id,name) values("12345678902","test")';
+	$sql = 'insert into user (id,name) values ("12345678902","test")';
 	
 	// SQL実行
 	$res = $dbh->query($sql);
 	
 	// testテーブルの全データを取得
-	$sql = 'SELECT * FROM test';
+	$sql = 'SELECT * FROM user';
 	$data = $dbh->query($sql);
 
 	if( !empty($data) ) {
