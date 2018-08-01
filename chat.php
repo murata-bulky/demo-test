@@ -5,7 +5,7 @@
 		<title>自動回答</title>
 	</head>
 	<body>
-		<form action="chat2.php" method="post">
+		<form action="chat.php" method="post">
 			<label class="label" for="name">名前</label>
 			<input id="name" type="text" name="name">
 			<label class="label" for="tel">電話番号</label>
