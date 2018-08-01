@@ -15,6 +15,9 @@ try {
 	$sql = "SELECT * FROM test";
 	$data = $dbh->query($sql);
 	print_r("実行");
+	
+	$result = $data->fetch(PDO::FETCH_ASSOC);
+	print_r($result['name']);
 	/*
 	foreach($data as $value){
 		var_dump("氏名".$value['name']);
