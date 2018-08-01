@@ -14,7 +14,7 @@ try {
 	// testテーブルの全データを取得
 	$sql = "SELECT * FROM test";
 	$data = $dbh->query($sql);
-	print_r("実行".$data['name']);
+	print_r("実行");
 	/*
 	foreach($data as $value){
 		var_dump("氏名".$value['name']);
