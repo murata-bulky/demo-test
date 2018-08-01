@@ -1,10 +1,10 @@
 <?php
 
 try {
-	// DBã¸æŽ¥ç¶š
+	// DB‚ÖÚ‘±
 	$dbh = new PDO("pgsql:host=ec2-50-16-241-91.compute-1.amazonaws.com; dbname=dc9ftkn51cgcj;", 'zhyyeuduffaiuf', 'b770c8d49644c40a7bbf73401a7c8dd8e140829b3ae028b70fe7e35067279898');
 
-	// SQLä½œæˆ
+	// SQLì¬
 	$sql = 'CREATE TABLE user (
 		id INT(11) AUTO_INCREMENT PRIMARY KEY,
 		name VARCHAR(20),
@@ -12,30 +12,32 @@ try {
 		registry_datetime DATETIME
 	) engine=innodb default charset=utf8';
 
-	// SQLå®Ÿè¡Œ
+	// SQLŽÀs
 	$res = $dbh->query($sql);
 	
-	// testãƒ†ãƒ¼ãƒ–ãƒ«ã«ãƒ‡ãƒ¼ã‚¿ã‚’ç™»éŒ²
-	$sql = 'insert into test(id,name) values("12345678901","test")';
+	// testƒe[ƒuƒ‹‚Éƒf[ƒ^‚ð“o˜^
+	$sql = 'insert into test(id,name) values("12345678902","test")';
 	
-	// SQLå®Ÿè¡Œ
+	// SQLŽÀs
 	$res = $dbh->query($sql);
 	
-	// testãƒ†ãƒ¼ãƒ–ãƒ«ã®å…¨ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
+	// testƒe[ƒuƒ‹‚Ì‘Sƒf[ƒ^‚ðŽæ“¾
 	$sql = 'SELECT * FROM test';
 	$data = $dbh->query($sql);
 
 	if( !empty($data) ) {
 		foreach( $data as $value ) {
 			print_r($value['name']);
+			error_log($value['name']);
 		}
 	}
 
 } catch(PDOException $e) {
 	print_r($e->getMessage());
+	error_log($e->getMessage());
 	die();
 }
 
-// æŽ¥ç¶šã‚’é–‰ã˜ã‚‹
+// Ú‘±‚ð•Â‚¶‚é
 $dbh = null;
 ?>
