@@ -14,12 +14,13 @@ try {
 	// testテーブルの全データを取得
 	$sql = "SELECT * FROM test";
 	$data = $dbh->query($sql);
-	print_r("実行");
-	
+	print_r("実行".$data['name']);
+	/*
 	foreach($data as $value){
 		var_dump("氏名".$value['name']);
 		//error_log($value['name']);
 	}
+	*/
 
 } catch(PDOException $e) {
 	print_r("エラー".$e->getMessage());
