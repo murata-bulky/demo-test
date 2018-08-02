@@ -10,8 +10,8 @@
 			<input id="name" type="text" name="name">
 			<label class="label" for="tel">電話番号</label>
 			<input id="tel" type="text" name="tel">
-			<label class="label" for="e-mail">メール</label>
-			<input id="e-mail" type="email" name="email">
+			<label class="label" for="mail">メール</label>
+			<input id="mail" type="mail" name="mail">
 			<label class="label" for="message">本文</label>
 			<textarea cols="50" rows="6" id="message" placeholder="問い合せ内容を入力してください" name="inquiry"></textarea>
 			<input type="submit" value="送信" />
@@ -28,7 +28,7 @@
 
 		<?php
 			session_start();
-			$_SESSION['test'] .= "Q : " .  $_POST["inquiry"] . "\n\n";
+			$_SESSION['test'] .= "Q : " . $_POST["inquiry"] . "\n\n";
 			//watsonへの送信データ
 			$data = array("input" => array("text" => $_POST["inquiry"]));
 			
@@ -56,10 +56,24 @@
 			//print_r($json);
 
 			$_SESSION['test'] .= "A : " . $json['output']['text'][count($json['output']['text']) - 1] . "\n\n";
-
 			
 			//watsonからの回答を画面に出力
 			//print_r($json['output']['text'][count($json['output']['text']) - 1]);
+			
+			//ファイル出力するJSONデータ作成
+			$post_data = [
+				'Name' => $_POST["name"],
+				'Tel' => $_POST["tel"],
+				'Mail' => $_POST["mail"],
+				'Question' => $_POST["inquiry"],
+				'Answer' => 'Name' => $_POST["name"],
+			];
+			//ファイル出力
+			$json = fopen('./DataEntry.json', 'w+b');
+			//$json = fopen('./DataEntry.json', 'a');
+			fwrite($json, json_encode($post_data));
+			//fwrite($json,"\n");
+			fclose($json);
 		?>
 		
 		<textarea name="ans" cols="100" rows="30" readonly="readonly" style="background-color:#fff0f5;"><?php if(strlen($_SESSION['test']) > 0){echo ($_SESSION['test']);} ?></textarea><br/>
