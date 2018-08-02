@@ -65,8 +65,7 @@
 				'Name' => $_POST["name"],
 				'Tel' => $_POST["tel"],
 				'Mail' => $_POST["mail"],
-				'Question' => $_POST["inquiry"],
-				'Answer' => $json['output']['text'][count($json['output']['text']) - 1]
+				'QA' => $_SESSION['test']
 			];
 			//ファイル出力
 			$json = fopen('./DataEntry.json', 'w+b');
