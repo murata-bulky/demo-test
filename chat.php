@@ -59,7 +59,7 @@
 			
 			//watsonからの回答を画面に出力
 			//print_r($json['output']['text'][count($json['output']['text']) - 1]);
-			$guid = com_create_guid();
+			$guid = uniqid();
 			
 			//ファイル出力するJSONデータ作成
 			$post_data = [
