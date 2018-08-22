@@ -65,7 +65,8 @@
 				'Name' => $_POST["name"],
 				'Tel' => $_POST["tel"],
 				'Mail' => $_POST["mail"],
-				'QA' => $_SESSION['test']
+				'QA' => $_SESSION['test'],
+				'GUID' => com_create_guid()
 			];
 			//ファイル出力
 			$json = fopen('./DataEntry.json', 'w+b');
