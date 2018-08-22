@@ -59,6 +59,7 @@
 			
 			//watsonからの回答を画面に出力
 			//print_r($json['output']['text'][count($json['output']['text']) - 1]);
+			$guid = com_create_guid();
 			
 			//ファイル出力するJSONデータ作成
 			$post_data = [
@@ -66,7 +67,7 @@
 				'Tel' => $_POST["tel"],
 				'Mail' => $_POST["mail"],
 				'QA' => $_SESSION['test'],
-				'GUID' => com_create_guid()
+				'GUID' => $guid
 			];
 			//ファイル出力
 			$json = fopen('./DataEntry.json', 'w+b');
