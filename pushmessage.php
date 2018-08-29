@@ -15,6 +15,7 @@ error_log('テスト１');
 $jsonObj = json_decode($jsonString, true);
 error_log($jsonObj);
 
+echo "テスト１";
 echo $jsonObj;
 
 
