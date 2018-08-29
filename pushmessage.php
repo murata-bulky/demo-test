@@ -4,7 +4,9 @@ $accessToken = 'LIiqj7lBQ2iiBzw7REZMK/eeKIgHCv+0noCI7pzaxAG6c4ZTAvZHronTOAuAugpO
 $url = 'https://api.line.me/v2/bot/message/push';
 
 
-echo "aaa";
+$aaa = "sasasasa";
+
+echo $aaa;
 
 
 // receive json data from line webhook
