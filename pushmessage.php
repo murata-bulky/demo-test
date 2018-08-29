@@ -3,6 +3,10 @@
 $accessToken = 'LIiqj7lBQ2iiBzw7REZMK/eeKIgHCv+0noCI7pzaxAG6c4ZTAvZHronTOAuAugpOZDDjo4R7995GMuexO5YxguPjLyxjpRGgtBYjTRpau3eMPR3NQZHAcxwbD39ZNbdZbGgxm5QgSCX9QDkFHMHQ0AdB04t89/1O/w1cDnyilFU=';
 $url = 'https://api.line.me/v2/bot/message/push';
 
+
+echo aaa;
+
+
 // receive json data from line webhook
 $jsonString = file_get_contents('php://input');
 error_log('テスト１');
