@@ -12,6 +12,10 @@ $jsonString = file_get_contents('php://input');
 error_log('テスト１');
 $jsonObj = json_decode($jsonString, true);
 error_log($jsonObj);
+
+echo $jsonObj;
+
+
 /*
 $stdout= fopen( 'php://stdout', 'w' );
 fwrite( $stdout, $jsonObj . "\n" );
