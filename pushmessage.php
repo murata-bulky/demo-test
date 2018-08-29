@@ -34,6 +34,10 @@ $sendID = $jsonObj["sendID"];
 error_log($message_text);
 error_log($sendID);
 
+echo $message_text;
+echo $sendID;
+
+
 //ファイルに吐き出す
 
 
