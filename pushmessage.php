@@ -15,7 +15,7 @@ error_log($sendID);
 //ファイルに吐き出す
 //ファイル出力
 $json = fopen('./QandA.json', 'w+b');
-fwrite($json, json_encode($jsonObj));
+fwrite($json, json_encode($jsonString));
 fclose($json);
 
 ?>
