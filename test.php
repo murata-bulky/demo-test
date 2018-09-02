@@ -1,17 +1,17 @@
 <?php
-	//watson‚Ö‚Ì‘—Mƒf[ƒ^
+	//watsonã¸ã®é€ä¿¡ãƒ‡ãƒ¼ã‚¿
 	//$data = array("input" => array("text" => $_POST["inquiry"]));
-	$data = array("intent" => "V¤•i","description" => "","examples" => array("text" => "V¤•i‚É‚Â‚¢‚Ä‹³‚¦‚Ä‚­‚¾‚³‚¢","mentions" => array("entity" => "","location" => "0")));
+	$data = array("intent" => "æ–°å•†å“","description" => "","examples" => array("text" => "æ–°å•†å“ã«ã¤ã„ã¦æ•™ãˆã¦ãã ã•ã„","mentions" => array("entity" => "","location" => "0")));
 	
-	//watsonÚ‘±URL
+	//watsonæŽ¥ç¶šURL
 	$url = 'https://gateway.watsonplatform.net/assistant/api/v1/workspaces/d77632f7-8c14-4076-8512-3b1760cf3841/intents?version=2018-07-10';
 	
-	//watson‚Ìƒ†[ƒU[ID : ƒpƒXƒ[ƒh
+	//watsonã®ãƒ¦ãƒ¼ã‚¶ãƒ¼ID : ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 	$userInfo = '69bcc66a-a892-438e-b7f7-ec7af5014788:2vYLXsmtFGbg';
 	
 	$encode = json_encode($data);
-	print_r("Šm”F".$encode);
-	//‘—M—p‚ÌCURLƒRƒ}ƒ“ƒhì¬
+	print_r("ç¢ºèª".$encode);
+	//é€ä¿¡ç”¨ã®CURLã‚³ãƒžãƒ³ãƒ‰ä½œæˆ
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -19,7 +19,7 @@
 	curl_setopt($ch, CURLOPT_USERPWD, $userInfo);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charser=UTF-8'));
 	
-	//CURLƒRƒ}ƒ“ƒhŽÀs
+	//CURLã‚³ãƒžãƒ³ãƒ‰å®Ÿè¡Œ
 	$result = curl_exec($ch);
 	curl_close($ch);
 ?>
