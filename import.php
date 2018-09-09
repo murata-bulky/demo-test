@@ -20,5 +20,6 @@
 	
 	//CURLコマンド実行
 	$result = curl_exec($ch);
+	print_r("結果".$result);
 	curl_close($ch);
 ?>
