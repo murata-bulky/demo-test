@@ -1,1 +1,1 @@
-{intent:"hello",examples:[{text:"Good morning"},{text:"Hi there"}]}
+{intent:hello,examples:[{text:Good morning},{text:Hi there}]}
