@@ -1,18 +1,18 @@
 {
     "type": "standard",
-    "title": "�ی������",
+    "title": "保険金受取",
     "output": {
       "generic": [
         {
           "values": [
             {
-              "text": "�ύX�͂𑗕t�������܂��B���Ђ܂ł��₢���킹���������B���₢���킹�� 03-XXXX-XXXX"
+              "text": "変更届を送付いたします。当社までお問い合わせください。お問い合わせ先 03-XXXX-XXXX"
             }
           ],
           "response_type": "text"
         }
       ]
     },
-    "conditions": "#�ی������",
+    "conditions": "#保険金受取",
     "dialog_node": "greeting"
 }
