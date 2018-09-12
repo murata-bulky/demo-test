@@ -14,5 +14,5 @@
       ]
     },
     "conditions": "#保険金受取",
-    "dialog_node": "greeting"
+    "dialog_node": "hokenuketori"
 }
