@@ -1,0 +1,18 @@
+{
+    "type": "standard",
+    "title": "保険金受取",
+    "output": {
+      "generic": [
+        {
+          "values": [
+            {
+              "text": "変更届を送付いたします。当社までお問い合わせください。お問い合わせ先 03-XXXX-XXXX"
+            }
+          ],
+          "response_type": "text"
+        }
+      ]
+    },
+    "conditions": "#保険金受取",
+    "dialog_node": "hokenuketori"
+}
