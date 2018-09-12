@@ -8,7 +8,7 @@
 	//watsonのユーザーID : パスワード
 	$userInfo = '69bcc66a-a892-438e-b7f7-ec7af5014788:2vYLXsmtFGbg';
 	
-	$encode = json_encode($data);
+	$encode = json_encode($data,JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
 	print_r("確認".$encode);
 	//送信用のCURLコマンド作成
 	$ch = curl_init($url);
