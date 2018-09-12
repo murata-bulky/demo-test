@@ -2,7 +2,7 @@
 	//watsonへの送信データ
 	//$data = array("input" => array("text" => $_POST["inquiry"]));
 	//$data = array("intent" => "新商品2","examples" => array("text" => "新商品について教えてください","text" => "新商品について"));
-	$data = array("intent" => "新商品");
+	$data = array("intent" => "新商品2");
 	
 	//watson接続URL
 	$url = 'https://gateway.watsonplatform.net/assistant/api/v1/workspaces/d77632f7-8c14-4076-8512-3b1760cf3841/intents?version=2018-07-10';
