@@ -21,5 +21,6 @@
 	
 	//CURLコマンド実行
 	$result = curl_exec($ch);
+	print_r("確認".$result);
 	curl_close($ch);
 ?>
