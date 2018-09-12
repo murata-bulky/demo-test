@@ -1,0 +1,18 @@
+{
+    "type": "standard",
+    "title": "Greeting",
+    "output": {
+      "generic": [
+        {
+          "values": [
+            {
+              "text": "Hi! How can I help you?"
+            }
+          ],
+          "response_type": "text"
+        }
+      ]
+    },
+    "conditions": "#hello",
+    "dialog_node": "greeting"
+}
