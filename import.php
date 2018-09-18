@@ -1,6 +1,6 @@
 <?php
 	//watsonへの送信データ
-	$data = file_get_contents('./QandA.json',true);
+	$data = file_get_contents('./intent_import.json',true);
 	
 	//watson接続URL
 	$url = 'https://gateway.watsonplatform.net/assistant/api/v1/workspaces/d77632f7-8c14-4076-8512-3b1760cf3841/intents?version=2018-07-10';
